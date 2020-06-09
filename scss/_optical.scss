@@ -1,0 +1,207 @@
+//系列鏡框 optical page1
+.series{
+  margin-bottom: 88px;
+  @media (max-width:992px){
+    margin-bottom: 40px;
+  }
+  .seriesMenu{
+    max-width: 1200px;
+    margin: 0 auto;
+    li{
+      font-size: 42px;
+      font-weight: 700;
+      width: 0;
+      flex-grow: 1;
+      border: 1px solid $gray-base;
+      @media (max-width:992px){
+        font-size: 28px;
+      }
+      @media (max-width:767px){
+        font-size: 14px;
+      }
+      a{
+        color: $base;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 24px 0 24px 0;
+        position: relative;
+        @media (max-width:992px){
+          padding: 16px 0 16px 0;
+        }
+        @media (max-width:767px){
+          padding: 8px 0 8px 0;
+        }
+      }
+      a::before{
+        content: '';
+        position: absolute;
+        height: 16px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary;
+        display: none;
+      }
+      a:hover:before{
+        display: block;
+      }
+    }
+    img{
+      width: 48px;
+      margin-right: 8px;
+      @media (max-width:992px){
+        width: 32px;
+      }
+      @media (max-width:767px){
+        width: 15px;
+      }
+    }
+    img[alt="functional"]{
+      width: 35px;
+      @media (max-width:992px){
+        width: 23px;
+      }
+      @media (max-width:767px){
+        width: 11px;
+      }
+    }
+  }
+  .seriesPic{
+    justify-content: space-between;
+    li{
+      height: 309px;
+      width: 49.5%;
+      background-position: center center;
+      background-size: cover;
+      @media (max-width:992px){
+        width: 50%;
+      }
+      @media (max-width:767px){
+        height: 144px;
+      }
+    }
+    li:last-child{
+      background-image: url(../images/optical-banner2-2x.png);
+      @media (max-width:992px){
+        background-image: url(../images/optical-banner2-ipad-2x.png);
+      }
+    }
+  }
+}
+.Celluloid{
+  text-align: center;
+  &__title{
+    font-size: 42px;
+    line-height: 1.2;
+    @media (max-width:992px){
+      font-size: 32px;
+    }
+    @media (max-width:767px){
+      font-size: 20px;
+    }
+  }
+  &__subtitle{
+    font-size: 32px;
+    margin-bottom: 48px;
+    @media (max-width:992px){
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    @media (max-width:767px){
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  &__card{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card{
+      width: 23.5%;
+      margin-bottom: 104px;
+      @media (max-width:992px){
+        width: 48%;
+        margin-bottom: 72px;
+      }
+      @media (max-width:576px){
+        width: 100%;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__page{
+    margin-top: -16px;
+    margin-bottom: 156px;
+    justify-content: center;
+    li{
+      height: 100%;
+      border: 1px solid #000;
+      width: 41px;
+      height: 48px;
+      a{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: $base;
+        &:hover{
+          background-color: #F2F2F2;
+        }
+        &.active{
+          color: $white;
+          background-color: $base;
+        }
+      }
+      &:first-child , &:last-child{
+        width: 81px;
+      }
+      
+    }
+    li + li{
+      border-left: none;
+    }
+
+  }
+}
+.card{
+  &__pic{
+    height: 164px;
+    background-position: center center;
+    background-size: cover;
+    @media (max-width:576px){
+      height: 166px;
+    }
+  }
+  &__txt{
+    p{
+      justify-content: space-between;
+      font-size: 24px;
+      @media (max-width:576px){
+        font-size: 16px;
+      }
+      span{
+        color: $primary;
+        font-weight: 700;
+      }
+    }
+  }
+  &__colorbox{
+    li{
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      border-radius: 4px;
+      @media (max-width:576px){
+        width: 16px;
+        height: 16px;
+      }
+      &:nth-child(1){
+        background-color: #5F3E2D;
+      }
+      &:nth-child(2){
+        background-color: #B75929;
+      }
+    }
+  }
+}
